@@ -1,0 +1,34 @@
+<head>
+    <%- include('../partials/links') %>
+    <%- include('../partials/nav') %>
+</head>
+<body>
+<!--    <h1>En esta vista vamos a mostrar los detalles de un producto</h1>-->
+
+<!--     DETALLE DE UN PRODUCTO   -->
+
+
+<section class="gallery" id="portafolio">
+ <h1 class="subtitulo">Lo mas destacado</h1>
+    <div class="contenedor">
+     
+        <div class="contenedor-galeria">
+            <% destacado.forEach(destacados => { %>   
+            <img src="<%-destacados.imagen%>" class="img-galeria">
+            <% }) %>
+        </div> 
+    </div>
+   
+</section>
+<!-- esta seccion realiza el efecto light-box*/-->
+
+<section class="imagen-light">
+    <img src="/img/close.svg" alt="" class="close">
+    <img class="agregar-imagen" src="" alt="">
+</section> 
+
+
+</body>
+<footer><%- include('../partials/footer') %></footer>
+
+

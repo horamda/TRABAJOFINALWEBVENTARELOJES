@@ -1,0 +1,37 @@
+    <head>
+        <%- include('../partials/links') %>
+        <%- include('../partials/nav') %>
+    </head>
+   
+<body>
+    <h2 class="subtitulo">Nuestra seleccion de relojes</h2>
+    <div class="box-container">
+        <% products.forEach(productos => { %>   
+        <div class="box">
+            
+            <div class="image"> 
+                <img src="<%-productos.imagen%>" alt="">
+            </div>
+                <div class="info">
+                    <h3 class="title"><%-productos.marca%> <span><span> / </span> <%-productos.nombre_reloj%></span></h3>
+                    <div class="sub-info">
+                        <div class="price"><%-productos.precio%> <span> <%-productos.precio*2%></span> <span> <%-productos.oferta%> <span>% </span></span></div>
+                         <div class="stars">
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star-half"></i>
+                         </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <a href="#" style ="--i:1;"class="fas fa-shopping-cart"></a>
+                    <a href="#" style ="--i:2;"class="fas fa-heart"></a>
+                    <a href="#" style ="--i:3;"class="fas fa-search"></a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+</body>
+    <footer><%- include('../partials/footer') %></footer>
